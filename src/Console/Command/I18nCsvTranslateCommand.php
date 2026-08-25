@@ -84,8 +84,7 @@ class I18nCsvTranslateCommand extends Command
         $client = $this->httpClientFactory->create();
         
         $client->setHeaders([
-            'Authorization' => 'DeepL-Auth-Key ' . $key,
-            'Content-Type'  => 'application/json',
+            'Authorization' => 'DeepL-Auth-Key ' . $key
         ]);
 
         $client->post('https://api-free.deepl.com/v2/translate', [
