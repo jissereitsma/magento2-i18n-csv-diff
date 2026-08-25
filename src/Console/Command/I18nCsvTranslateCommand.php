@@ -62,10 +62,6 @@ class I18nCsvTranslateCommand extends Command
         }
 
         $out = $input->getOption('out');
-        if ($out !== 'stdout' && !file_exists($out)) {
-            $output->writeln('Output file does not exist: ' . $out . '');
-            return Command::FAILURE;
-        }
 
         $inFileHandle  = $in === 'stdin'
             ? STDIN
